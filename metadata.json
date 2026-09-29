@@ -1,0 +1,8 @@
+{
+  "name": "Historique de Géolocalisation BLE",
+  "description": "Application de suivi et de visualisation d'historique de géolocalisation pour tags BLE avec carte OpenStreetMap, filtres temporels et tableau interactif.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
