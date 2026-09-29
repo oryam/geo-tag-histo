@@ -8,7 +8,11 @@
     "build": "vite build",
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "predeploy:clean": "rm -rf dist/*",
+    "predeploy": "vite build --base=/geo-tag-histo/",
+    "predeploy:domain": "echo oryam.github.io > dist/CNAME",
+    "deploy": "npm run predeploy:domain && gh-pages -d dist"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",
@@ -31,6 +35,7 @@
     "@types/react-dom": "^19.3.0",
     "autoprefixer": "^10.4.21",
     "esbuild": "^0.25.0",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^4.3.3",
     "tsx": "^4.21.0",
     "typescript": "^7.0.2"
